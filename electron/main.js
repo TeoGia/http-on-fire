@@ -5,7 +5,9 @@ let mainWindow;
 
 function createWindow () {
 
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  const screen = electron.screen.getPrimaryDisplay().size;
+
+  mainWindow = new BrowserWindow({width: screen.width*0.6, height: screen.height*0.6});
 
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
