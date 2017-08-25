@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "startweb": "ng serve",
+    "start": "npm run build && npm run postbuild && electron dist",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
