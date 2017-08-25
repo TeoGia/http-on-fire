@@ -5,13 +5,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "ng build && cp -R src/public dist/public",
-	"postbuild": "cp -a electron/. dist",
-	"electron": "npm run postbuild && electron dist" 
+    "postbuild": "cp -a electron/. dist",
+    "electron": "npm run postbuild && electron dist"
   },
   "private": true,
   "dependencies": {
