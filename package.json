@@ -2,6 +2,9 @@
   "name": "http-on-fire",
   "version": "1.0.0",
   "license": "MIT",
+  "author": "Theodore Giannopoulos teogia89@gmail.com",
+  "description": "A simple http requester",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "startweb": "ng serve",
@@ -10,8 +13,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build": "ng build && cp -R src/public dist/public",
-    "postbuild": "cp -a electron/. dist",
-    "electron": "npm run postbuild && electron dist"
+    "postbuild": "cp -a electron/. dist && cp package.json dist/",
+    "electron": "npm run postbuild && electron dist",
+    "dist": "npm run clean && npm run build && npm run postbuild && electron-builder --project dist",
+    "clean": "rm -rf dist/*"
+  },
+  "build": {
+    "appId": "http.on.fire",
+    "mac": {
+      "category": "dev.web.productivity"
+    }
   },
   "private": true,
   "dependencies": {
@@ -36,6 +47,7 @@
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
     "electron": "^1.7.5",
+    "electron-builder": "^19.24.1",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
