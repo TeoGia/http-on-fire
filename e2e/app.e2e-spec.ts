@@ -1,10 +1,10 @@
-import { HttpAppPage } from './app.po';
+import { HttpDummyPage } from './app.po';
 
-describe('http-app App', () => {
-  let page: HttpAppPage;
+describe('http-dummy App', () => {
+  let page: HttpDummyPage;
 
   beforeEach(() => {
-    page = new HttpAppPage();
+    page = new HttpDummyPage();
   });
 
   it('should display message saying app works', () => {
