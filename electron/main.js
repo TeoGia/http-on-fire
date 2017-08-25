@@ -1,5 +1,6 @@
 const electron = require('electron');
 const isDev = require('electron-is-dev');
+require('electron-debug')({showDevTools: true});
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
