@@ -15,7 +15,7 @@
     "build": "ng build && cp -R src/public dist/public",
     "postbuild": "cp -a electron/. dist && cp package.json dist/",
     "electron": "npm run postbuild && electron dist",
-    "dist": "npm run clean && npm run build && npm run postbuild && electron-builder --project dist",
+    "dist": "npm run build && npm run postbuild && electron-builder --project dist",
     "clean": "rm -rf dist/*"
   },
   "build": {
