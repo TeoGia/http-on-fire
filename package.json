@@ -1,0 +1,24 @@
+{
+  "name": "http-on-fire",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@angular/cli": "^1.3.2",
+    "electron": "^1.7.5",
+    "electron-builder": "^19.24.1"
+  },
+  "build": {
+    "appId": "http.on.fire",
+    "app-category-type": "public.app-category.productivity",
+    "dmg": {},
+    "win": {
+      "iconUrl": ""
+    }
+  }
+}
