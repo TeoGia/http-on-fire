@@ -13,6 +13,8 @@ import { TabMenuModule } from 'primeng/primeng';
  */
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EditorComponent } from './editor/editor.component';
 
 /**
  * Root level services.
@@ -22,7 +24,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent
+    NavigationComponent,
+    PageNotFoundComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
