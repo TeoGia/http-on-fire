@@ -16,5 +16,9 @@ import { transition, trigger, useAnimation } from '@angular/animations';
 
 })
 export class AppComponent {
-  title = 'app works!';
+
+  public prepareRouteTransition (outlet) {
+    const animation = outlet.activatedRouteData['animation'] || {};
+    return animation['value'] || null;
+  }
 }

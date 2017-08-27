@@ -21,47 +21,17 @@ const appRoutes: Routes = [
     }
   },
   {
-    path: 'navigation',
-    component: NavigationComponent,
+    path: 'editor',
+    component: EditorComponent,
     data: {
       animation: {
-        value: 'navigation'
+        value: 'editor'
       }
     },
-    children: [
-      {
-        path: 'editor',
-        component: EditorComponent,
-        data: {
-          animation: {
-            value: 'editor'
-          }
-        }
-      },
-      {
-        path: '',
-        redirectTo: 'editor',
-        pathMatch: 'full',
-        data: {
-          animation: {
-            value: 'editor'
-          }
-        }
-      },
-      {
-        path: '**',
-        component: PageNotFoundComponent,
-        data: {
-          animation: {
-            value: 'notfound'
-          }
-        }
-      }
-    ]
   },
   {
     path: '',
-    redirectTo: 'navigation/editor',
+    redirectTo: 'editor',
     pathMatch: 'full',
     data: {
       animation: {
