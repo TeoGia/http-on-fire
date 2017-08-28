@@ -12,11 +12,7 @@ function createWindow() {
   const newHeight = Math.round(screen.height * 0.8);
 
   mainWindow = new BrowserWindow({ width: newWidth, height: newHeight });
-  // mainWindow.setSize(newWidth, newHeight);
-  console.log(mainWindow.getSize());
-
   mainWindow.setMenu(null);
-
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 
   if (isDev) {
