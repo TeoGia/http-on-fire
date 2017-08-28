@@ -15,10 +15,10 @@ export class NavigationComponent implements OnInit {
   ngOnInit() {
     this.items = [
       { label: 'Editor', icon: 'fa-paper-plane', routerLink: 'editor' },
-      { label: 'Stats', icon: 'fa-bar-chart', routerLink: 'notfound' },
-      { label: 'Documentation', icon: 'fa-book', routerLink: 'notfound' },
-      { label: 'Support', icon: 'fa-support', routerLink: 'notfound' },
-      { label: 'Social', icon: 'fa-twitter', routerLink: 'notfound' }
+      { label: 'Stats', icon: 'fa-bar-chart', routerLink: 'stats' },
+      { label: 'Documentation', icon: 'fa-book', routerLink: 'docu' },
+      { label: 'Support', icon: 'fa-support', routerLink: 'support' },
+      { label: 'Social', icon: 'fa-twitter', routerLink: 'social' }
     ];
   }
 

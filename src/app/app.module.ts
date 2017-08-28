@@ -17,6 +17,10 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EditorComponent } from './editor/editor.component';
 import { AppRoutingModule } from './app-routing.module';
+import { StatsComponent } from './stats/stats.component';
+import { DocuComponent } from './docu/docu.component';
+import { SupportComponent } from './support/support.component';
+import { SocialComponent } from './social/social.component';
 
 /**
  * Root level services.
@@ -28,7 +32,11 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     NavigationComponent,
     PageNotFoundComponent,
-    EditorComponent
+    EditorComponent,
+    StatsComponent,
+    DocuComponent,
+    SupportComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

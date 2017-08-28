@@ -7,8 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EditorComponent } from './editor/editor.component';
-
-
+import { StatsComponent } from './stats/stats.component';
+import { DocuComponent } from './docu/docu.component';
+import { SupportComponent } from './support/support.component';
+import { SocialComponent } from './social/social.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +28,42 @@ const appRoutes: Routes = [
     data: {
       animation: {
         value: 'editor'
+      }
+    },
+  },
+  {
+    path: 'stats',
+    component: StatsComponent,
+    data: {
+      animation: {
+        value: 'stats'
+      }
+    },
+  },
+  {
+    path: 'docu',
+    component: DocuComponent,
+    data: {
+      animation: {
+        value: 'docu'
+      }
+    },
+  },
+  {
+    path: 'support',
+    component: SupportComponent,
+    data: {
+      animation: {
+        value: 'support'
+      }
+    },
+  },
+  {
+    path: 'social',
+    component: SocialComponent,
+    data: {
+      animation: {
+        value: 'social'
       }
     },
   },
