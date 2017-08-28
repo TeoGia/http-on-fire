@@ -8,8 +8,12 @@ let mainWindow;
 function createWindow() {
 
   const screen = electron.screen.getPrimaryDisplay().size;
+  const newWidth = Math.round(screen.width * 0.75);
+  const newHeight = Math.round(screen.height * 0.8);
 
-  mainWindow = new BrowserWindow({ width: screen.width * 0.6, height: screen.height * 0.6 });
+  mainWindow = new BrowserWindow({ width: newWidth, height: newHeight });
+  // mainWindow.setSize(newWidth, newHeight);
+  console.log(mainWindow.getSize());
 
   mainWindow.setMenu(null);
 
