@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  * Primeng modules
  */
 import { TabMenuModule } from 'primeng/primeng';
+import { DataListModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -21,6 +22,7 @@ import { StatsComponent } from './stats/stats.component';
 import { DocuComponent } from './docu/docu.component';
 import { SupportComponent } from './support/support.component';
 import { SocialComponent } from './social/social.component';
+import { HistoryComponent } from './editor/history/history.component';
 
 /**
  * Root level services.
@@ -36,7 +38,8 @@ import { SocialComponent } from './social/social.component';
     StatsComponent,
     DocuComponent,
     SupportComponent,
-    SocialComponent
+    SocialComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { SocialComponent } from './social/social.component';
     HttpModule,
     TabMenuModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DataListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

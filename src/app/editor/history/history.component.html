@@ -1,0 +1,10 @@
+<p-dataList
+  [value]="reqHistory"
+  [paginator]="true"
+  [rows]="15"
+  class="history-data-list">
+  <p-header>History</p-header>
+  <ng-template let-car pTemplate="item">
+      {{ car.url }}
+  </ng-template>
+</p-dataList>
