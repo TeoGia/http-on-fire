@@ -9,6 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  */
 import { TabMenuModule } from 'primeng/primeng';
 import { DataListModule } from 'primeng/primeng';
+import { PanelModule } from 'primeng/primeng';
+import { TabViewModule } from 'primeng/primeng';
+import { AccordionModule } from 'primeng/primeng';
+import { InputTextareaModule } from 'primeng/primeng';
+
 
 /**
  * Apps components
@@ -23,6 +28,7 @@ import { DocuComponent } from './docu/docu.component';
 import { SupportComponent } from './support/support.component';
 import { SocialComponent } from './social/social.component';
 import { HistoryComponent } from './editor/history/history.component';
+import { EditorPanelComponent } from './editor/editor-panel/editor-panel.component';
 
 /**
  * Root level services.
@@ -39,7 +45,8 @@ import { HistoryComponent } from './editor/history/history.component';
     DocuComponent,
     SupportComponent,
     SocialComponent,
-    HistoryComponent
+    HistoryComponent,
+    EditorPanelComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,11 @@ import { HistoryComponent } from './editor/history/history.component';
     TabMenuModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DataListModule
+    DataListModule,
+    PanelModule,
+    TabViewModule,
+    AccordionModule,
+    InputTextareaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
