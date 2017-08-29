@@ -16,21 +16,13 @@
           </div>
         </p-accordionTab>
         <p-accordionTab header="Headers">
-          <p-dataTable [value]="request.headers" [editable]="true">
-            <p-column field="use" header="" [style]="{'width':'5%', 'text-align':'center'}">
-              <ng-template let-col let-req="rowData" let-ri="rowIndex" pTemplate="body">
-                <p-checkbox [(ngModel)]="req.use" binary="true"></p-checkbox>
-              </ng-template>
-            </p-column>
-            <p-column field="key" header="Key" [style]="{'width':'45%'}"></p-column>
-            <p-column field="value" header="Value" [style]="{'width':'50%'}"></p-column>
-          </p-dataTable>
+          <app-data-table [inputVal]="request.headers"></app-data-table>
         </p-accordionTab>
         <p-accordionTab header="Parameters">
-          Content 3
+          <app-data-table [inputVal]="request.parameters"></app-data-table>
         </p-accordionTab>
         <p-accordionTab header="Body">
-          Content 3
+          <app-data-table [inputVal]="request.body"></app-data-table>
         </p-accordionTab>
       </p-accordion>
     </p-tabPanel>

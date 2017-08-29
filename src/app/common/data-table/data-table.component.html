@@ -1,0 +1,12 @@
+<p-dataTable [value]="inputVal" [editable]="true">
+  <p-footer>
+    
+  </p-footer>
+  <p-column field="use" header="" [style]="{'width':'5%', 'text-align':'center'}">
+    <ng-template let-col let-req="rowData" let-ri="rowIndex" pTemplate="body">
+      <p-checkbox [(ngModel)]="req.use" binary="true"></p-checkbox>
+    </ng-template>
+  </p-column>
+  <p-column field="key" header="Key" [style]="{'width':'45%'}"></p-column>
+  <p-column field="value" header="Value" [style]="{'width':'50%'}"></p-column>
+</p-dataTable>

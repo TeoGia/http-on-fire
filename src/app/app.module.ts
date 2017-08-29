@@ -32,6 +32,7 @@ import { SupportComponent } from './support/support.component';
 import { SocialComponent } from './social/social.component';
 import { HistoryComponent } from './editor/history/history.component';
 import { EditorPanelComponent } from './editor/editor-panel/editor-panel.component';
+import { DataTableComponent } from './common/data-table/data-table.component';
 
 /**
  * Root level services.
@@ -49,7 +50,8 @@ import { EditorPanelComponent } from './editor/editor-panel/editor-panel.compone
     SupportComponent,
     SocialComponent,
     HistoryComponent,
-    EditorPanelComponent
+    EditorPanelComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule, CheckboxModule,
