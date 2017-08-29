@@ -17,6 +17,8 @@ import { DropdownModule } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
 import { CheckboxModule } from 'primeng/primeng';
+import { ToolbarModule } from 'primeng/primeng';
+import { ButtonModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -55,8 +57,8 @@ import { DataTableComponent } from './common/data-table/data-table.component';
   ],
   imports: [
     BrowserModule, CheckboxModule,
-    FormsModule,
-    HttpModule,
+    FormsModule, ToolbarModule,
+    HttpModule, ButtonModule,
     TabMenuModule,
     AppRoutingModule,
     BrowserAnimationsModule,

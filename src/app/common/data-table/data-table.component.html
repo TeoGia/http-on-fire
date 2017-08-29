@@ -1,6 +1,14 @@
 <p-dataTable [value]="inputVal" [editable]="true">
   <p-footer>
-    
+    <p-toolbar>
+      <div class="ui-toolbar-group-left">
+        <!-- possible left content here -->
+      </div>
+      <div class="ui-toolbar-group-right">
+        <button pButton type="button" icon="fa-plus" label="Add" class="ui-button-info"></button>
+        <button pButton type="button" icon="fa-trash" label="Remove" class="ui-button-danger"></button>
+      </div>
+    </p-toolbar>
   </p-footer>
   <p-column field="use" header="" [style]="{'width':'5%', 'text-align':'center'}">
     <ng-template let-col let-req="rowData" let-ri="rowIndex" pTemplate="body">
