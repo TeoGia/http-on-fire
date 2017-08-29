@@ -18,37 +18,42 @@ export class HistoryComponent implements OnInit {
       {
         method: 'POST',
         url: 'dummy.url.org',
-        headers: {},
-        body: {},
-        parameters: []
+        headers: [],
+        body: [],
+        parameters: [],
+        response: {}
       },
       {
         method: 'POST',
         url: 'dummy.url.org',
-        headers: {},
-        body: {},
-        parameters: []
+        headers: [],
+        body: [],
+        parameters: [],
+        response: {}
       },
       {
         method: 'POST',
         url: 'dummy.url.org',
-        headers: {},
-        body: {},
-        parameters: []
+        headers: [],
+        body: [],
+        parameters: [],
+        response: {}
       },
       {
         method: 'POST',
         url: 'dummy.url.org',
-        headers: {},
-        body: {},
-        parameters: []
+        headers: [],
+        body: [],
+        parameters: [],
+        response: {}
       },
       {
         method: 'POST',
         url: 'dummy.url.org',
-        headers: {},
-        body: {},
-        parameters: []
+        headers: [],
+        body: [],
+        parameters: [],
+        response: {}
       }
     ];
   }

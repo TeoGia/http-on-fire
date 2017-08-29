@@ -1,7 +1,10 @@
+import { Option } from './option.interface';
+
 export interface Request {
-  method;
-  headers;
-  body;
-  url;
-  parameters;
+  method: string;
+  headers: Option[];
+  body: Option[];
+  url: string;
+  parameters: Option[];
+  response: any;
 };

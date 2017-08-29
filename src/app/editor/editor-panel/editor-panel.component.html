@@ -5,18 +5,20 @@
         <p-accordionTab header="HTTP Method & URL">
           <div class="ui-g">
             <div class="ui-g-2">
-              <p-dropdown [options]="methods" [(ngModel)]="selectedMethod"></p-dropdown>
+              <p-dropdown [options]="methods" [(ngModel)]="request.method"></p-dropdown>
             </div>
             <div class="ui-g-10">
               <div class="ui-inputgroup">
                 <span class="ui-inputgroup-addon">URL</span>
-                <input type="text" pInputText [(ngModel)]="url" />
+                <input type="text" pInputText [(ngModel)]="request.url" />
               </div>
             </div>
           </div>
         </p-accordionTab>
         <p-accordionTab header="Headers">
-          Content 3
+          <p-dataTable [value]="request.headers">
+            <p-column *ngFor="let col of headerColumns" [field]="col.field" [header]="col.header"></p-column>
+          </p-dataTable>
         </p-accordionTab>
         <p-accordionTab header="Parameters">
           Content 3

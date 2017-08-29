@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/primeng';
+import { Request } from '../../common/interfaces/request.interface';
 
 @Component({
   selector: 'app-editor-panel',
@@ -8,11 +9,20 @@ import { SelectItem } from 'primeng/primeng';
 })
 export class EditorPanelComponent implements OnInit {
 
+  public request: Request;
   public methods: SelectItem[];
-  public selectedMethod: string;
-  public url: string;
+  public headerColumns: any[];
 
   constructor() {
+    this.request = {
+      method: '',
+      headers: [],
+      parameters: [],
+      url: '',
+      body: [],
+      response: {}
+    };
+
     this.methods = [];
     this.methods.push({ label: 'GET', value: 'GET' });
     this.methods.push({ label: 'POST', value: 'POST' });
@@ -32,6 +42,10 @@ export class EditorPanelComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.headerColumns = [
+      { field: 'key', header: 'Key' },
+      { field: 'value', header: 'Value' }
+    ];
   }
 
 }

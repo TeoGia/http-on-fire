@@ -15,6 +15,7 @@ import { AccordionModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
 import { DropdownModule } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
+import { DataTableModule, SharedModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -62,7 +63,9 @@ import { EditorPanelComponent } from './editor/editor-panel/editor-panel.compone
     AccordionModule,
     InputTextareaModule,
     DropdownModule,
-    InputTextModule
+    InputTextModule,
+    DataTableModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
