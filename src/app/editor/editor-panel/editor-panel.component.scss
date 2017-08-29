@@ -7,3 +7,7 @@ textarea {
 .ui-inputtext {
   width: 100%;
 }
+
+:host /deep/ .ui-dropdown {
+  width: 100% !important;
+}
