@@ -2,7 +2,7 @@
   <p-footer>
     <p-toolbar>
       <div class="ui-toolbar-group-left">
-        <!-- possible left content here -->
+        <div>Total: {{ inputVal.length }}&nbsp;&nbsp;&nbsp;Sending: {{ sendingSum }}</div>
       </div>
       <div class="ui-toolbar-group-right">
         <button pButton type="button" icon="fa-plus" label="Add" class="ui-button-info"></button>
@@ -12,7 +12,7 @@
   </p-footer>
   <p-column field="use" header="" [style]="{'width':'5%', 'text-align':'center'}">
     <ng-template let-col let-req="rowData" let-ri="rowIndex" pTemplate="body">
-      <p-checkbox [(ngModel)]="req.use" binary="true"></p-checkbox>
+      <p-checkbox [(ngModel)]="req.use" binary="true" (onChange)="getSum(req.use)"></p-checkbox>
     </ng-template>
   </p-column>
   <p-column field="key" header="Key" [style]="{'width':'45%'}"></p-column>

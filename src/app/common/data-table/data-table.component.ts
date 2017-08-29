@@ -8,10 +8,31 @@ import { Option } from '../interfaces/option.interface';
 })
 export class DataTableComponent implements OnInit {
   @Input() inputVal: Option[];
+  public sendingSum: number;
 
-  constructor() { }
+  constructor() {
+    this.sendingSum = 0;
+  }
 
   ngOnInit() {
+    for (const entry of this.inputVal) {
+      if (entry.use) {
+        this.sendingSum++;
+      }
+    }
+  }
+
+  /**
+   * getSum - Gets the event from the checkbox selection and adds it or
+   * subtracts it from the sending sum.
+   * @param {boolean} checked
+   */
+  public getSum(checked: boolean) {
+    if (checked) {
+      this.sendingSum++;
+    } else {
+      this.sendingSum--;
+    }
   }
 
 }
