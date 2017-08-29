@@ -16,6 +16,7 @@ import { InputTextareaModule } from 'primeng/primeng';
 import { DropdownModule } from 'primeng/primeng';
 import { InputTextModule } from 'primeng/primeng';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
+import { CheckboxModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -51,7 +52,7 @@ import { EditorPanelComponent } from './editor/editor-panel/editor-panel.compone
     EditorPanelComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, CheckboxModule,
     FormsModule,
     HttpModule,
     TabMenuModule,

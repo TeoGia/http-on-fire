@@ -11,7 +11,6 @@ export class EditorPanelComponent implements OnInit {
 
   public request: Request;
   public methods: SelectItem[];
-  public headerColumns: any[];
 
   constructor() {
     this.request = {
@@ -42,10 +41,8 @@ export class EditorPanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.headerColumns = [
-      { field: 'key', header: 'Key' },
-      { field: 'value', header: 'Value' }
-    ];
+    // TODO remove dummy data when ready
+    this.request.headers.push({ use: true, key: 'hello', value: 'world' });
   }
 
 }
