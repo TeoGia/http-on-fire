@@ -2,11 +2,18 @@
   <p-tabView>
     <p-tabPanel header="Build">
       <p-accordion>
-        <p-accordionTab header="HTTP Method">
-          Content 1
-        </p-accordionTab>
-        <p-accordionTab header="URL">
-          Content 2
+        <p-accordionTab header="HTTP Method & URL">
+          <div class="ui-g">
+            <div class="ui-g-2">
+              <p-dropdown [options]="methods" [(ngModel)]="selectedMethod"></p-dropdown>
+            </div>
+            <div class="ui-g-10 form-group">
+              <div class="ui-inputgroup">
+                <span class="ui-inputgroup-addon">URL</span>
+                <input type="text" pInputText [(ngModel)]="url" />
+              </div>
+            </div>
+          </div>
         </p-accordionTab>
         <p-accordionTab header="Headers">
           Content 3

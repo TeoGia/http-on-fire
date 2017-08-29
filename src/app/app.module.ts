@@ -13,7 +13,8 @@ import { PanelModule } from 'primeng/primeng';
 import { TabViewModule } from 'primeng/primeng';
 import { AccordionModule } from 'primeng/primeng';
 import { InputTextareaModule } from 'primeng/primeng';
-
+import { DropdownModule } from 'primeng/primeng';
+import { InputTextModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -59,7 +60,9 @@ import { EditorPanelComponent } from './editor/editor-panel/editor-panel.compone
     PanelModule,
     TabViewModule,
     AccordionModule,
-    InputTextareaModule
+    InputTextareaModule,
+    DropdownModule,
+    InputTextModule
   ],
   providers: [],
   bootstrap: [AppComponent]
