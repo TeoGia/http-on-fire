@@ -11,3 +11,7 @@ textarea {
 :host /deep/ .ui-dropdown {
   width: 100% !important;
 }
+
+:host /deep/ a {
+  text-decoration: none;
+}
