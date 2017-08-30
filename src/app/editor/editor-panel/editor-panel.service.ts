@@ -38,6 +38,10 @@ export class EditorPanelService {
     if (this.req.body.length > 0) {
       body = this.generateBody();
     }
+    this.sendRequest(url, options, body).subscribe(
+      (data) => {
+        console.log(data);
+      });
   }
 
   /**
@@ -86,4 +90,46 @@ export class EditorPanelService {
     return body;
   }
 
+  /**
+   * Send request according to its type.
+   * @param { string } url
+   * @param { RequestOptions } options
+   * @param { any } body
+   */
+  private sendRequest(url: string, options: RequestOptions, body: any) {
+    switch (this.req.method) {
+      case 'GET':
+        return this.http.get(url, options);
+      case 'POST':
+        return this.http.post(url, body, options);
+      case 'PUT':
+        return this.http.put(url, body, options);
+      case 'PATCH':
+        break;
+      case 'DELETE':
+        return this.http.delete(url, options);
+      case 'COPY':
+        break;
+      case 'HEAD':
+        break;
+      case 'OPTIONS':
+        break;
+      case 'LINK':
+        break;
+      case 'UNLINK':
+        break;
+      case 'PURGE':
+        break;
+      case 'LOCK':
+        break;
+      case 'UNLOCK':
+        break;
+      case 'PROPFIND':
+        break;
+      case 'VIEW':
+        break;
+      default:
+      // TODO create an error growl.
+    }
+  }
 }

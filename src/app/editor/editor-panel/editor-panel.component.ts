@@ -43,8 +43,7 @@ export class EditorPanelComponent implements OnInit {
   }
 
   ngOnInit() {
-    // TODO remove dummy data when ready
-    this.request.headers.push({ use: true, key: 'hello', value: 'world' });
+
   }
 
   /**
