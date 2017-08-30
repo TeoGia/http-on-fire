@@ -52,7 +52,7 @@ export class DataTableComponent implements OnInit {
    * Adds a new row to the data table.
    */
   public addRow() {
-    this.inputVal = [ ...this.inputVal, { use: false, key: '', value: '' } ];
+    this.inputVal = [ ...this.inputVal, { use: true, key: '', value: '' } ];
     this.inputChange.emit(this.inputVal);
   }
 
