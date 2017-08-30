@@ -40,7 +40,7 @@ export class EditorPanelService {
     }
     this.sendRequest(url, options, body).subscribe(
       (data) => {
-        console.log(data);
+        this.req.response = Object.assign({}, data);
       });
   }
 

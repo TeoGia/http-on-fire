@@ -37,5 +37,8 @@
     <p-tabPanel header="Raw">
       <textarea pInputTextarea></textarea>
     </p-tabPanel>
+    <p-tabPanel header="Response">
+      {{ request.response | json }}
+    </p-tabPanel>
   </p-tabView>
 </p-panel>
