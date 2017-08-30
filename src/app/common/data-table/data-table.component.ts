@@ -15,31 +15,33 @@ export class DataTableComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (const entry of this.inputVal) {
-      if (entry.use) {
-        this.sendingSum++;
-      }
-    }
+    this.getSum();
   }
 
   /**
-   * Gets the event from the checkbox selection and adds it or
-   * subtracts it from the sending sum.
-   * @param {boolean} checked
+   * Find the total checked rows of the data table.
    */
-  public getSum(checked: boolean) {
-    if (checked) {
-      this.sendingSum++;
-    } else {
-      this.sendingSum--;
+  public getSum() {
+    let sum = 0;
+    for (const entry of this.inputVal) {
+      if (entry.use) {
+        sum++;
+      }
     }
+    this.sendingSum = sum;
   }
 
   /**
    * Removes all selected rows from the data table.
    */
   public removeSelectedRows() {
-    // TODO
+    const data: Option[] = [];
+    this.inputVal.forEach((entry: Option) => {
+      if (entry.use) {
+        data.push(entry);
+      }
+    });
+    this.inputVal = [ ...data ];
   }
 
   /**
