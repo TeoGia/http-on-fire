@@ -23,7 +23,7 @@ export class DataTableComponent implements OnInit {
   }
 
   /**
-   * getSum - Gets the event from the checkbox selection and adds it or
+   * Gets the event from the checkbox selection and adds it or
    * subtracts it from the sending sum.
    * @param {boolean} checked
    */
@@ -33,6 +33,20 @@ export class DataTableComponent implements OnInit {
     } else {
       this.sendingSum--;
     }
+  }
+
+  /**
+   * Removes all selected rows from the data table.
+   */
+  public removeSelectedRows() {
+    // TODO
+  }
+
+  /**
+   * Adds a new row to the data table.
+   */
+  public addRow() {
+    this.inputVal = [ ...this.inputVal, { use: false, key: '', value: '' } ];
   }
 
 }
