@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/primeng';
+import { EditorPanelService } from './editor-panel.service';
 import { Request } from '../../common/interfaces/request.interface';
 
 @Component({
   selector: 'app-editor-panel',
   templateUrl: './editor-panel.component.html',
-  styleUrls: ['./editor-panel.component.scss']
+  styleUrls: ['./editor-panel.component.scss'],
+  providers: [EditorPanelService]
 })
 export class EditorPanelComponent implements OnInit {
 
   public request: Request;
   public methods: SelectItem[];
 
-  constructor() {
+  constructor(private editorPanelService: EditorPanelService) {
     this.request = {
       method: 'GET',
       headers: [],
@@ -49,8 +51,7 @@ export class EditorPanelComponent implements OnInit {
    * Send the user request.
    */
   public send() {
-    // TODO
-    console.log(this.request);
+    this.editorPanelService.fireRequest(this.request);
   }
 
 }
