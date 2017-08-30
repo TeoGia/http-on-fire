@@ -29,9 +29,14 @@ export class EditorPanelService {
   private buildRequest() {
     const options = new RequestOptions();
     let url = this.req.url;
+    let body = {};
+
     options.headers = this.generateHeaders();
     if (this.req.parameters.length > 0) {
       url = url.concat(this.generateUrlParams());
+    }
+    if (this.req.body.length > 0) {
+      body = this.generateBody();
     }
   }
 
@@ -66,6 +71,19 @@ export class EditorPanelService {
       return queryString;
     }
     return '';
+  }
+
+  /**
+   * Generate request's body.
+   */
+  private generateBody() {
+    const body = {};
+    this.req.body.forEach((entry: Option) => {
+      if (entry.use) {
+        body[entry.key] = entry.value;
+      }
+    });
+    return body;
   }
 
 }
