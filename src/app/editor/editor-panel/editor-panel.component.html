@@ -24,13 +24,13 @@
           </div>
         </p-accordionTab>
         <p-accordionTab header="Headers">
-          <app-data-table [inputVal]="request.headers"></app-data-table>
+          <app-data-table [inputVal]="request.headers" (inputChange)="request.headers=$event"></app-data-table>
         </p-accordionTab>
-        <p-accordionTab header="Parameters">
-          <app-data-table [inputVal]="request.parameters"></app-data-table>
+        <p-accordionTab header="Query string parameters">
+          <app-data-table [inputVal]="request.parameters" (inputChange)="request.parameters=$event"></app-data-table>
         </p-accordionTab>
         <p-accordionTab header="Body">
-          <app-data-table [inputVal]="request.body"></app-data-table>
+          <app-data-table [inputVal]="request.body" (inputChange)="request.body=$event"></app-data-table>
         </p-accordionTab>
       </p-accordion>
     </p-tabPanel>

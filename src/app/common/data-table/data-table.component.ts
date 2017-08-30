@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Option } from '../interfaces/option.interface';
 
 @Component({
@@ -8,10 +8,13 @@ import { Option } from '../interfaces/option.interface';
 })
 export class DataTableComponent implements OnInit {
   @Input() inputVal: Option[];
+  @Output() inputChange: EventEmitter<Option[]>;
+
   public sendingSum: number;
 
   constructor() {
     this.sendingSum = 0;
+    this.inputChange = new EventEmitter<Option[]>();
   }
 
   ngOnInit() {
@@ -42,6 +45,7 @@ export class DataTableComponent implements OnInit {
       }
     });
     this.inputVal = [ ...data ];
+    this.inputChange.emit(this.inputVal);
   }
 
   /**
@@ -49,6 +53,7 @@ export class DataTableComponent implements OnInit {
    */
   public addRow() {
     this.inputVal = [ ...this.inputVal, { use: false, key: '', value: '' } ];
+    this.inputChange.emit(this.inputVal);
   }
 
 }
