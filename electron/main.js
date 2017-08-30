@@ -2,6 +2,7 @@ const electron = require('electron');
 const isDev = require('electron-is-dev');
 require('electron-debug')({showDevTools: true});
 const app = electron.app;
+const path = require('path');
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
@@ -14,6 +15,9 @@ function createWindow() {
   mainWindow = new BrowserWindow({ width: newWidth, height: newHeight });
   mainWindow.setMenu(null);
   mainWindow.loadURL(`file://${__dirname}/index.html`);
+
+  let icon = electron.nativeImage.createFromPath(path.join(__dirname, '/public/images/logo.png'));
+  mainWindow.setIcon(icon);
 
   if (isDev) {
     console.log('Running in development mode.');

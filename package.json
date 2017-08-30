@@ -22,7 +22,8 @@
     "appId": "http.on.fire",
     "mac": {
       "category": "dev.web.productivity"
-    }
+    },
+    "icon": "./public/images/logo.ico"
   },
   "private": true,
   "dependencies": {
