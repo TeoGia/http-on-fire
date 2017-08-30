@@ -14,7 +14,7 @@ export class EditorPanelComponent implements OnInit {
 
   constructor() {
     this.request = {
-      method: '',
+      method: 'GET',
       headers: [],
       parameters: [],
       url: '',
@@ -43,6 +43,14 @@ export class EditorPanelComponent implements OnInit {
   ngOnInit() {
     // TODO remove dummy data when ready
     this.request.headers.push({ use: true, key: 'hello', value: 'world' });
+  }
+
+  /**
+   * Send the user request.
+   */
+  public send() {
+    // TODO
+    console.log(this.request);
   }
 
 }
