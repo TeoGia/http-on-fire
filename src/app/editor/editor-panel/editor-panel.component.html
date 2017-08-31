@@ -2,9 +2,7 @@
   <p-header>
     <div class="ui-helper-clearfix">
       <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Request editor</span>
-      <button pButton type="button"
-        style="float:right;" label="Send" class="ui-button-info"
-        icon="fa-check" (click)="send()"></button>
+      <button pButton type="button" style="float:right;" label="Send" class="ui-button-info" icon="fa-check" (click)="send()"></button>
     </div>
   </p-header>
   <p-tabView>
@@ -38,7 +36,7 @@
       <textarea pInputTextarea></textarea>
     </p-tabPanel>
     <p-tabPanel header="Response">
-      {{ request.response | json }}
+      <pre><code class="language-json" pCode>{{ request.response | json }}</code></pre>
     </p-tabPanel>
   </p-tabView>
 </p-panel>

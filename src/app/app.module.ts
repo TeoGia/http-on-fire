@@ -19,6 +19,7 @@ import { DataTableModule, SharedModule } from 'primeng/primeng';
 import { CheckboxModule } from 'primeng/primeng';
 import { ToolbarModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
+import { CodeHighlighterModule } from 'primeng/primeng';
 
 /**
  * Apps components
@@ -59,7 +60,7 @@ import { DataTableComponent } from './common/data-table/data-table.component';
     BrowserModule, CheckboxModule,
     FormsModule, ToolbarModule,
     HttpModule, ButtonModule,
-    TabMenuModule,
+    TabMenuModule, CodeHighlighterModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DataListModule,

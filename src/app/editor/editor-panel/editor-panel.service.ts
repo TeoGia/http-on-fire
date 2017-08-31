@@ -9,6 +9,7 @@ import 'rxjs/Rx';
 export class EditorPanelService {
 
   private req: Request;
+  private responseType: string;
 
   constructor(
     private http: Http
@@ -41,6 +42,7 @@ export class EditorPanelService {
     this.sendRequest(url, options, body).subscribe(
       (data) => {
         this.req.response = Object.assign({}, data);
+        this.responseType = this.req.response.headers._headers.get('content-type')[0]; 
       });
   }
 
