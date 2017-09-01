@@ -40,9 +40,11 @@ export class EditorPanelService {
       body = this.generateBody();
     }
     this.sendRequest(url, options, body).subscribe(
-      (data) => {
-        this.req.response = Object.assign({}, data);
-        this.responseType = this.req.response.headers._headers.get('content-type')[0]; 
+      (data: any) => {
+        this.req.response = Object.assign({}, data.json());
+        if (data.headers) {
+          this.responseType = data.headers._headers.get('content-type')[0];
+        }
       });
   }
 
