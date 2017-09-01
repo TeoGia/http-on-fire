@@ -9,7 +9,6 @@ import 'rxjs/Rx';
 export class EditorPanelService {
 
   private req: Request;
-  private responseType: string;
 
   constructor(
     private http: Http
@@ -39,11 +38,23 @@ export class EditorPanelService {
     if (this.req.body.length > 0) {
       body = this.generateBody();
     }
-    this.sendRequest(url, options, body).subscribe(
+    this.sendRequest(url, options, body).map(
+      (res: any) => {
+        if (res.headers) {
+          this.req.responseType = res.headers._headers.get('content-type')[0];
+        }
+        if (this.req.responseType.indexOf('json') >= 0) {
+          return res.json();
+        } else {
+          return res.text();
+        }
+      }
+    ).subscribe(
       (data: any) => {
-        this.req.response = Object.assign({}, data.json());
-        if (data.headers) {
-          this.responseType = data.headers._headers.get('content-type')[0];
+        if (typeof data === 'object') {
+          this.req.response = Object.assign({}, data);
+        } else {
+          this.req.response = data;
         }
       });
   }

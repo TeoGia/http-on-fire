@@ -21,7 +21,8 @@ export class HistoryComponent implements OnInit {
         headers: [],
         body: [],
         parameters: [],
-        response: {}
+        response: {},
+        responseType: ''
       },
       {
         method: 'POST',
@@ -29,7 +30,8 @@ export class HistoryComponent implements OnInit {
         headers: [],
         body: [],
         parameters: [],
-        response: {}
+        response: {},
+        responseType: ''
       },
       {
         method: 'POST',
@@ -37,7 +39,8 @@ export class HistoryComponent implements OnInit {
         headers: [],
         body: [],
         parameters: [],
-        response: {}
+        response: {},
+        responseType: ''
       },
       {
         method: 'POST',
@@ -45,7 +48,8 @@ export class HistoryComponent implements OnInit {
         headers: [],
         body: [],
         parameters: [],
-        response: {}
+        response: {},
+        responseType: ''
       },
       {
         method: 'POST',
@@ -53,7 +57,8 @@ export class HistoryComponent implements OnInit {
         headers: [],
         body: [],
         parameters: [],
-        response: {}
+        response: {},
+        responseType: ''
       }
     ];
   }

@@ -36,7 +36,12 @@
       <textarea pInputTextarea></textarea>
     </p-tabPanel>
     <p-tabPanel header="Response">
-      <pre><code class="language-json" pCode>{{ request.response | json }}</code></pre>
+      <div *ngIf="request.responseType.indexOf('json') >= 0">
+        <pre><code class="language-json" pCode>{{ request.response | json }}</code></pre>
+      </div>
+      <div *ngIf="request.responseType.indexOf('xml') >= 0">
+        <pre><code class="language-xml" pCode>{{ request.response }}</code></pre>
+      </div>
     </p-tabPanel>
   </p-tabView>
 </p-panel>

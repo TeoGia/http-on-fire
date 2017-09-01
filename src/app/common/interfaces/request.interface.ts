@@ -7,4 +7,5 @@ export interface Request {
   url: string;
   parameters: Option[];
   response: any;
+  responseType: string;
 };

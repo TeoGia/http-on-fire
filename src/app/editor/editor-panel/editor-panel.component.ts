@@ -22,7 +22,8 @@ export class EditorPanelComponent implements OnInit {
       parameters: [],
       url: '',
       body: [],
-      response: {}
+      response: {},
+      responseType: ''
     };
 
     this.methods = [];
