@@ -13,6 +13,7 @@ export class EditorPanelComponent implements OnInit {
 
   public request: Request;
   public methods: SelectItem[];
+  public index = 0;
 
   constructor(private editorPanelService: EditorPanelService) {
     this.request = {
@@ -51,6 +52,7 @@ export class EditorPanelComponent implements OnInit {
    */
   public send() {
     this.editorPanelService.fireRequest(this.request);
+    this.index = 2;
   }
 
 }

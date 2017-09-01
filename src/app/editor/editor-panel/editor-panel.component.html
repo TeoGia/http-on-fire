@@ -5,7 +5,7 @@
       <button pButton type="button" style="float:right;" label="Send" class="ui-button-info" icon="fa-check" (click)="send()"></button>
     </div>
   </p-header>
-  <p-tabView>
+  <p-tabView [activeIndex]="index">
     <p-tabPanel header="Build">
       <p-accordion>
         <p-accordionTab header="HTTP Method & URL">
