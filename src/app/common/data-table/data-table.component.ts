@@ -54,6 +54,7 @@ export class DataTableComponent implements OnInit {
   public addRow() {
     this.inputVal = [ ...this.inputVal, { use: true, key: '', value: '' } ];
     this.inputChange.emit(this.inputVal);
+    this.getSum();
   }
 
 }
