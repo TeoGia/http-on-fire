@@ -50,9 +50,17 @@ export class EditorPanelComponent implements OnInit {
   /**
    * Send the user request.
    */
-  public send() {
+  public send(): void {
     this.editorPanelService.fireRequest(this.request);
     this.index = 2;
+  }
+
+  /**
+   * Set the currenty selected tab index.
+   * @param { number } index
+   */
+  public setIndex(index: number): void {
+    this.index = index;
   }
 
 }
