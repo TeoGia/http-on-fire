@@ -21,7 +21,7 @@ export class EditorPanelService {
    * @param { Request } req
    */
   public fireRequest(req: Request) {
-    this.req = req;
+    this.req = Object.assign({}, req);
     this.buildRequest();
   }
 
@@ -58,6 +58,8 @@ export class EditorPanelService {
         } else {
           this.req.response = data;
         }
+        this.historyService.setHistoryEntry(this.req);
+      }, (error: any) => {
         this.historyService.setHistoryEntry(this.req);
       });
   }

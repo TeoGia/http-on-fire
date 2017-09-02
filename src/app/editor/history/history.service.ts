@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Request } from '../../common/interfaces/request.interface';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class HistoryService {
 
-  private historyLog: Request[];
+  private history: Request[];
+  private _historyLog: BehaviorSubject<Request[]>;
+  public readonly  historyLog: Observable<Request[]>;
 
-  constructor() { }
-
-  /**
-   * Get history data.
-   */
-  public getHistory(): Request[] {
-    return this.historyLog;
+  constructor() {
+    // TODO read values from localstorage or another DB at startup.
+    this.history = [];
+    this._historyLog = new BehaviorSubject(this.history);
+    this.historyLog = this._historyLog.asObservable();
   }
 
   /**
@@ -20,7 +22,8 @@ export class HistoryService {
    * @param { Request } entry
    */
   public setHistoryEntry(entry: Request): void {
-    this.historyLog.push(entry);
+    this.history.push(entry);
+    this._historyLog.next(this.history);
   }
 
 }

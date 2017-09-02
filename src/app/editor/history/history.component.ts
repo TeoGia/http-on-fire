@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Request } from '../../common/interfaces/request.interface';
+import { HistoryService } from './history.service';
 
 @Component({
   selector: 'app-history',
@@ -10,57 +11,18 @@ export class HistoryComponent implements OnInit {
 
   public reqHistory: Request[];
 
-  constructor() { }
+  constructor(
+    private historyService: HistoryService
+  ) {
+    this.reqHistory = [];
+  }
 
   ngOnInit() {
-    // TODO replace with real data when available.
-    this.reqHistory = [
-      {
-        method: 'POST',
-        url: 'dummy.url.org',
-        headers: [],
-        body: [],
-        parameters: [],
-        response: {},
-        responseType: ''
-      },
-      {
-        method: 'POST',
-        url: 'dummy.url.org',
-        headers: [],
-        body: [],
-        parameters: [],
-        response: {},
-        responseType: ''
-      },
-      {
-        method: 'POST',
-        url: 'dummy.url.org',
-        headers: [],
-        body: [],
-        parameters: [],
-        response: {},
-        responseType: ''
-      },
-      {
-        method: 'POST',
-        url: 'dummy.url.org',
-        headers: [],
-        body: [],
-        parameters: [],
-        response: {},
-        responseType: ''
-      },
-      {
-        method: 'POST',
-        url: 'dummy.url.org',
-        headers: [],
-        body: [],
-        parameters: [],
-        response: {},
-        responseType: ''
+    this.historyService.historyLog.subscribe(
+      (data: Request[]) => {
+        this.reqHistory = Object.assign([], data);
       }
-    ];
+    );
   }
 
 }
