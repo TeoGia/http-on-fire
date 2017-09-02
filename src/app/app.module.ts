@@ -32,7 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { StatsComponent } from './stats/stats.component';
 import { DocuComponent } from './docu/docu.component';
 import { SupportComponent } from './support/support.component';
-import { SocialComponent } from './social/social.component';
+import { SettingsComponent } from './settings/settings.component';
 import { HistoryComponent } from './editor/history/history.component';
 import { EditorPanelComponent } from './editor/editor-panel/editor-panel.component';
 import { DataTableComponent } from './common/data-table/data-table.component';
@@ -51,7 +51,7 @@ import { DataTableComponent } from './common/data-table/data-table.component';
     StatsComponent,
     DocuComponent,
     SupportComponent,
-    SocialComponent,
+    SettingsComponent,
     HistoryComponent,
     EditorPanelComponent,
     DataTableComponent

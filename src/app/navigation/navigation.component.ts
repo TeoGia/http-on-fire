@@ -18,7 +18,7 @@ export class NavigationComponent implements OnInit {
       { label: 'Stats', icon: 'fa-bar-chart', routerLink: 'stats' },
       { label: 'Documentation', icon: 'fa-book', routerLink: 'docu' },
       { label: 'Support', icon: 'fa-support', routerLink: 'support' },
-      { label: 'Social', icon: 'fa-twitter', routerLink: 'social' }
+      { label: 'Settings', icon: 'fa-cogs', routerLink: 'settings' }
     ];
   }
 

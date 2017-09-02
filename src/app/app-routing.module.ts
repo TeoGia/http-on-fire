@@ -10,7 +10,7 @@ import { EditorComponent } from './editor/editor.component';
 import { StatsComponent } from './stats/stats.component';
 import { DocuComponent } from './docu/docu.component';
 import { SupportComponent } from './support/support.component';
-import { SocialComponent } from './social/social.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const appRoutes: Routes = [
   {
@@ -59,11 +59,11 @@ const appRoutes: Routes = [
     },
   },
   {
-    path: 'social',
-    component: SocialComponent,
+    path: 'settings',
+    component: SettingsComponent,
     data: {
       animation: {
-        value: 'social'
+        value: 'settings'
       }
     },
   },
