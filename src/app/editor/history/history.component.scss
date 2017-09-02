@@ -1,0 +1,11 @@
+@import '../../../colors.scss';
+
+.history-entry {
+  border-bottom: 1px solid;
+  border-color: $border;
+}
+
+.history-entry-details {
+  margin-left: 5px;
+  margin-top: 2px;
+}

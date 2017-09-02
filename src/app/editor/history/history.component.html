@@ -1,10 +1,10 @@
 <p-panel header="History">
-  <p-dataList
-    [value]="reqHistory"
-    [paginator]="true"
-    [rows]="15">
+  <p-dataList [value]="reqHistory" [paginator]="true" [rows]="15">
     <ng-template let-req pTemplate="item">
-        {{ req.url }}
+      <div class="ui-inputgroup history-entry">
+        <span class="ui-inputgroup-addon">{{ req.method }}</span>
+        <span class="history-entry-details">{{ req.url }}</span>
+      </div>
     </ng-template>
   </p-dataList>
 </p-panel>
