@@ -3,6 +3,7 @@ import { Http, RequestOptions, Headers, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Request } from '../../common/interfaces/request.interface';
 import { Option } from '../../common/interfaces/option.interface';
+import { HistoryService } from '../history/history.service';
 import 'rxjs/Rx';
 
 @Injectable()
@@ -11,7 +12,8 @@ export class EditorPanelService {
   private req: Request;
 
   constructor(
-    private http: Http
+    private http: Http,
+    private historyService: HistoryService
   ) { }
 
   /**
@@ -56,6 +58,7 @@ export class EditorPanelService {
         } else {
           this.req.response = data;
         }
+        this.historyService.setHistoryEntry(this.req);
       });
   }
 

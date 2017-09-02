@@ -40,7 +40,7 @@ import { DataTableComponent } from './common/data-table/data-table.component';
 /**
  * Root level services.
  */
-// TODO here
+import { HistoryService } from './editor/history/history.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +73,7 @@ import { DataTableComponent } from './common/data-table/data-table.component';
     DataTableModule,
     SharedModule
   ],
-  providers: [],
+  providers: [HistoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
